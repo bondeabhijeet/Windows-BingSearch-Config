@@ -2,3 +2,5 @@ sudo apt-get update
 curl -fsSL https://tailscale.com/install.sh | sh
 curl -fsS https://dl.brave.com/install.sh | sh
 tailscale configure systray --enable-startup=systemd
+systemctl --user daemon-reload
+systemctl --user enable --now tailscale-systray
